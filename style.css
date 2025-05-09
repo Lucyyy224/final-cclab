@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, #fef6e4, #e0f7fa);
+    text-align: center;
+    padding: 2em;
+  }
+  
+  .result {
+    margin-top: 2em;
+    padding: 1em;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
