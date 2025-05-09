@@ -1,41 +1,41 @@
-let moodColors;
+let styleAdvice;
 
-fetch("moodColors.json")
+fetch("styleAdvice.json")
   .then(response => response.json())
-  .then(data => moodColors = data)
-  .catch(err => console.error("Failed to load mood colors JSON", err));
+  .then(data => styleAdvice = data)
+  .catch(err => console.error("Failed to load styleAdvice JSON", err));
 
 async function getDivination() {
   const city = document.getElementById("cityInput").value;
   const mood = document.getElementById("moodSelect").value;
-  const apiKey = "6f99633cf0b894c5e366fedf705b6c67"; // your real API key
+  const apiKey = "6f99633cf0b894c5e366fedf705b6c67";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const weather = data.weather[0].main;
+    const weather = data.weather[0].main.toLowerCase();
     const description = data.weather[0].description;
     const temp = data.main.temp;
 
-    const colors = moodColors[mood];
-    const suggestion = getSuggestion(weather, mood);
-    const perfume = getPerfumeSuggestion(mood);
-    const explanation = getColorExplanation(mood);
-    const comment = getWeatherComment(weather.toLowerCase());
+    let tempLabel = "cold";
+    if (temp > 22) tempLabel = "hot";
+    else if (temp > 12) tempLabel = "warm";
+
+    const key = `${mood}-${weather}-${tempLabel}`;
+    const result = styleAdvice[key] || styleAdvice["default"];
 
     document.getElementById("result").innerHTML = `
       <h2>Today's Weather</h2>
       <p>${weather} – ${description}, ${temp.toFixed(1)}°C</p>
       <h2>Today's Colors</h2>
-      <p>${colors.join(", ")}</p>
-      <p><em>Why these colors?</em> ${explanation}</p>
-      <p><em>Perfect for ${weather} weather!</em></p>
-
+      <p>${result.colors.join(", ")}</p>
+      <p><em>Why these colors?</em> ${getColorExplanation(mood)}</p>
+      <p><em>${getWeatherComment(weather)}</em></p>
       <h3>Suggestion</h3>
-      <p>${suggestion}</p>
+      <p>${result.message}</p>
       <h3>Recommended Perfume</h3>
-      <p>${perfume}</p>
+      <p>${getPerfumeSuggestion(mood)}</p>
     `;
     document.getElementById("result").style.display = "block";
   } catch (error) {
@@ -43,17 +43,21 @@ async function getDivination() {
   }
 }
 
-function getSuggestion(weather, mood) {
-  if (mood === "sad" && weather === "Rain") {
-    return "Soft layers and muted tones will support your calm energy.";
+function getWeatherComment(weather) {
+  switch (weather.toLowerCase()) {
+    case "clear": 
+      return "It's sunny—perfect for light and bright outfits!";
+    case "clouds": 
+      return "Cloudy skies? Great for layering and a cozy vibe.";
+    case "rain": 
+      return "Rainy day—consider something waterproof or with a hood!";
+    case "snow": 
+      return "Snowy weather calls for thick coats and warm accessories.";
+    case "thunderstorm": 
+      return "Stay stylish indoors—rituals count even at home.";
+    default: 
+      return "A great day to express yourself through what you wear.";
   }
-  if (mood === "happy" && weather === "Clear") {
-    return "Go bold with bright colors and breezy fabrics.";
-  }
-  if (mood === "anxious") {
-    return "Wear gentle fabrics and calming shades to ease your mind.";
-  }
-  return "Trust your instinct. Your aura knows what it needs.";
 }
 
 function getPerfumeSuggestion(mood) {
@@ -81,21 +85,3 @@ function getColorExplanation(mood) {
       return "These tones align with your current emotional flow.";
   }
 }
-
-function getWeatherComment(weather) {
-    switch (weather.toLowerCase()) {
-      case "clear": 
-        return "It's sunny—perfect for light and bright outfits!";
-      case "clouds": 
-        return "Cloudy skies? Great for layering and a cozy vibe.";
-      case "rain": 
-        return "Rainy day—consider something waterproof or with a hood!";
-      case "snow": 
-        return "Snowy weather calls for thick coats and warm accessories.";
-      case "thunderstorm": 
-        return "Stay stylish indoors—rituals count even at home.";
-      default: 
-        return "A great day to express yourself through what you wear.";
-    }
-  }
-  

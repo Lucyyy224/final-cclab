@@ -1,0 +1,94 @@
+{
+    "happy-casual-outdoor-bold-clear-hot": {
+      "colors": ["yellow", "coral", "sky blue"],
+      "message": "Express your brightness in the sunshine!",
+      "perfume": "Citrus and tropical notes like grapefruit."
+    },
+    "sad-formal-indoor-soft-rain-cold": {
+      "colors": ["charcoal", "navy", "olive"],
+      "message": "Stay calm and elegant during a rainy day.",
+      "perfume": "Amber and sandalwood for warmth."
+    },
+    "anxious-formal-indoor-soft-mist-cold": {
+      "colors": ["lavender", "cream", "stone gray"],
+      "message": "Keep it gentle and smooth to ease the nerves.",
+      "perfume": "Green tea and chamomile bring balance."
+    },
+    "happy-formal-outdoor-bold-clear-warm": {
+      "colors": ["red", "white", "gold"],
+      "message": "Let your confidence shine through elegant brightness.",
+      "perfume": "Jasmine and neroli for uplifting charm."
+    },
+    "sad-casual-outdoor-soft-clouds-warm": {
+      "colors": ["dusty blue", "mauve", "light gray"],
+      "message": "A soothing combination for reflective walks.",
+      "perfume": "Lavender and soft musk for peace."
+    },
+    "anxious-casual-indoor-bold-rain-warm": {
+      "colors": ["forest green", "indigo", "rose"],
+      "message": "Let contrast bring you back to the present.",
+      "perfume": "Mint and bergamot to clear your head."
+    },
+    "happy-casual-indoor-soft-clear-hot": {
+      "colors": ["light peach", "sky blue", "ivory"],
+      "message": "Brighten your space and spirit together.",
+      "perfume": "Orange blossom and lily."
+    },
+    "sad-formal-outdoor-bold-clouds-cold": {
+      "colors": ["burgundy", "deep green", "midnight blue"],
+      "message": "Stand grounded in dramatic elegance.",
+      "perfume": "Vetiver and patchouli for depth."
+    },
+    "anxious-casual-outdoor-soft-snow-cold": {
+      "colors": ["soft lilac", "white", "pale mint"],
+      "message": "Dress like a calming snowfall.",
+      "perfume": "Pine and eucalyptus."
+    },
+    "happy-formal-indoor-bold-clear-cold": {
+      "colors": ["ruby", "bronze", "cream"],
+      "message": "Bring the warmth with richness indoors.",
+      "perfume": "Spiced floral blends like cinnamon-rose."
+    },
+    "sad-casual-indoor-soft-mist-warm": {
+      "colors": ["powder blue", "olive", "soft brown"],
+      "message": "Let the mist inspire grounding comfort.",
+      "perfume": "Amber and tea leaves."
+    },
+    "anxious-formal-outdoor-bold-clear-hot": {
+      "colors": ["teal", "plum", "white"],
+      "message": "Harness the clarity of the day with confident tones.",
+      "perfume": "Cedar and mint for mental focus."
+    },
+    "happy-formal-indoor-soft-clouds-warm": {
+      "colors": ["peach", "dusty rose", "sand"],
+      "message": "Dress softly for your glowing state of mind.",
+      "perfume": "Vanilla and orange blossom."
+    },
+    "sad-casual-outdoor-bold-thunderstorm-cold": {
+      "colors": ["black", "maroon", "charcoal"],
+      "message": "Let the storm reflect your intensity.",
+      "perfume": "Dark oud and tobacco."
+    },
+    "happy-casual-indoor-bold-mist-warm": {
+      "colors": ["mustard", "aqua", "gray"],
+      "message": "Lift the mist with color.",
+      "perfume": "Citrus and sage."
+    },
+    "sad-formal-indoor-bold-snow-cold": {
+      "colors": ["ink", "burgundy", "smoke"],
+      "message": "Stay strong and poised inside.",
+      "perfume": "Frankincense and myrrh."
+    },
+    "anxious-casual-outdoor-soft-rain-warm": {
+      "colors": ["sky", "fog", "seafoam"],
+      "message": "Breathe and dress like the gentle rain.",
+      "perfume": "Eucalyptus and lemongrass."
+    },
+    "default": {
+      "colors": ["white", "beige", "gray"],
+      "message": "Trust your intuition when styling today.",
+      "perfume": "Whatever makes you feel at ease."
+    }
+  }
+  
+  

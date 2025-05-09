@@ -5,33 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Style Divination</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Sigmar&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-  <h1>🔮 Style Divination</h1>
+  <h1>🔮 Clothing Style Divination</h1>
   <p>Enter your city and mood to discover today's look:</p>
 
   <input id="cityInput" placeholder="Enter city" />
+
+  <label for="moodSelect">Mood:</label>
   <select id="moodSelect">
     <option value="happy">Happy</option>
     <option value="sad">Sad</option>
     <option value="anxious">Anxious</option>
   </select>
+
+  <label for="styleSelect">Style:</label>
+  <select id="styleSelect">
+    <option value="formal">Formal</option>
+    <option value="casual">Casual</option>
+  </select>
+
+  <label for="activitySelect">Activity:</label>
+  <select id="activitySelect">
+    <option value="indoor">Indoor</option>
+    <option value="outdoor">Outdoor</option>
+  </select>
+
+  <label for="contrastSelect">Contrast:</label>
+  <select id="contrastSelect">
+    <option value="bold">Bold</option>
+    <option value="soft">Soft</option>
+  </select>
+
   <button onclick="getDivination()">Get Your Style</button>
 
   <div id="result" class="result" style="display:none"></div>
 
   <script src="main.js"></script>
-  <script>
-    function getWeatherComment(weather) {
-      switch (weather.toLowerCase()) {
-        case "clear": return "Perfect for sunshine and bright outfits!";
-        case "clouds": return "Great for layered or cozy outfits.";
-        case "rain": return "Don’t forget something water-resistant today!";
-        case "snow": return "Bundle up – it’s a snowy day!";
-        case "thunderstorm": return "Maybe stay indoors and look fabulous anyway.";
-        default: return `A great day to express yourself through your outfit.`;
-      }
-    }
-  </script>
 </body>
 </html>

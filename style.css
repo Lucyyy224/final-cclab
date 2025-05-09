@@ -1,15 +1,78 @@
 body {
-    font-family: sans-serif;
-    background: linear-gradient(to bottom, #fef6e4, #e0f7fa);
-    text-align: center;
-    padding: 2em;
+    font-family: 'Oswald', sans-serif;
+    
+    background: linear-gradient(-45deg, #e0f7fa, #fce4ec, #f3e5f5, #e8f5e9);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+    background-color: #c86fa4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5em;
+  }
+  
+  input, select, button {
+    font-size: 1rem;
+    padding: 10px 12px;
+    margin: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  select {
+    appearance: none;
+  }
+  
+  button {
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a6558a;
   }
   
   .result {
     margin-top: 2em;
-    padding: 1em;
+    padding: 1.5em;
+    max-width: 600px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .result h2, .result h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  .result p {
+    margin-bottom: 1em;
   }
   
